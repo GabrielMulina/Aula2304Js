@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Exemplo para tela login DIMDIM</h1>
+
+    <form id="FormularioLogin">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario"><br>
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha"><br>
+        <button type="button" onclick="efetuarLogin();">Enviar</button>
+        <button type="button" onclick="limparCampus();">Limpar Campus</button>
+    </form>
+
+    <script>
+        function efetuarLogin()
+        {
+            let usuario = document.getElementById('usuario').value;
+            let senha = document.getElementById('senha').value;
+            if(usuario == 'senac' && senha == '29032004')
+             {
+                window.location.href= 'https://www.google.com.br/'; 
+             }
+             else if(usuario == 'senac')
+             {
+                alert("somente o usuario esta correto")
+             }
+             else
+             {
+                alert("USUARIO OU SENHA INCORRETOS");
+             }
+           
+        }
+
+        function limparCampus()
+        {
+            let limparU = document.getElementById('usuario').value = '';
+            let limparS = document.getElementById('senha').value = '';
+            let focus =  document.getElementById('usuario').focus();
+
+            limparU = '';
+            limparS = '';
+            focus;
+        }
+    </script>
+    
+</body>
+</html>
